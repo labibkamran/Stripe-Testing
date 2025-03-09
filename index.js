@@ -35,9 +35,7 @@ app.post('/checkout', async (req, res) => {
             }            
         ],
         mode: 'payment',
-        shipping_address_collection: {
-            allowed_countries: ['US', 'BR']
-        },
+        shipping_address_collection: {},
         success_url: `${process.env.BASE_URL}/complete?session_id={CHECKOUT_SESSION_ID}`,
         cancel_url: `${process.env.BASE_URL}/cancel`
     })
